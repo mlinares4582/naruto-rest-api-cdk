@@ -1,0 +1,162 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "NarutoApiCdkStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "NarutoApiCdkStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "NarutoApiCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "NarutoApiCdkStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9f6f50261a13a9dbf877abd9fe653061d5b786e812d58e99ca00123b570097d6.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "NarutoApiCdkStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "NarutoApiCdkStack.assets"
+      ],
+      "metadata": {
+        "/NarutoApiCdkStack/table-naruto": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "tablenaruto46D0120A"
+            }
+          }
+        ],
+        "/NarutoApiCdkStack/table-naruto/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tablenaruto46D0120A"
+          }
+        ],
+        "/NarutoApiCdkStack/getAllLambdaNarutoFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getAllLambdaNarutoFunctionServiceRole9EFFF2E0"
+          }
+        ],
+        "/NarutoApiCdkStack/getAllLambdaNarutoFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getAllLambdaNarutoFunctionServiceRoleDefaultPolicyA8923F31"
+          }
+        ],
+        "/NarutoApiCdkStack/getAllLambdaNarutoFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getAllLambdaNarutoFunction312A2882"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapi3B6B8B26"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapiCloudWatchRoleD44FB216"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapiAccountBBD33226"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapiDeployment9285D240042a843e324f4e91f6897c0d7dcb5c2a"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapiDeploymentStageprod8A849BCF"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapiEndpoint0679112F"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Default/naruto/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapinaruto21A3C094"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Default/naruto/GET/ApiPermission.NarutoApiCdkStacknarutoapiF431BF06.GET..naruto": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapinarutoGETApiPermissionNarutoApiCdkStacknarutoapiF431BF06GETnarutoECD20D4F"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Default/naruto/GET/ApiPermission.Test.NarutoApiCdkStacknarutoapiF431BF06.GET..naruto": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapinarutoGETApiPermissionTestNarutoApiCdkStacknarutoapiF431BF06GETnaruto6A9B3AA4"
+          }
+        ],
+        "/NarutoApiCdkStack/naruto-api/Default/naruto/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "narutoapinarutoGET88DB1CB8"
+          }
+        ],
+        "/NarutoApiCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/NarutoApiCdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/NarutoApiCdkStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/NarutoApiCdkStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "NarutoApiCdkStack"
+    }
+  }
+}
